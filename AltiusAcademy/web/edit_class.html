@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Edit Class | Altius Academy</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top-bar">
+    <div class="logo"><img src="images/logo1.png" alt="Altius Academy" ></div>
+    <nav class="nav-menu">
+        <a href="class.html">Class</a>
+    </nav>
+    <div class="user-icon"><span>👤</span></div>
+</header>
+
+<main class="content">
+    <!-- Breadcrumb / Path -->
+    <div class="breadcrumb">
+        <a href="class.html">Class</a> / <span>Edit Class</span>
+    </div>
+
+    <h1>Edit Class</h1>
+
+    <style>
+        /* Breadcrumb style khusus page ini */
+        .breadcrumb {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .breadcrumb a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        .breadcrumb span {
+            color: #555;
+        }
+
+        /* Form style (sama seperti sebelum ini) */
+        form { max-width: 500px; margin: 20px auto; }
+        label { display: block; margin: 10px 0 5px; }
+        input, textarea { width: 100%; padding: 8px; margin-bottom: 15px; border-radius: 4px; border: 1px solid #ccc; }
+        .btn-update { background-color: #FFC107; color: #000; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; }
+    </style>
+
+    <form action="class.html">
+        <label>Nama Class</label>
+        <input type="text" name="class_name" value="Matematik" required>
+
+        <label>Deskripsi</label>
+        <textarea name="description" rows="4" required>Class untuk Matematik</textarea>
+
+        <button type="submit" class="btn-update">Update</button>
+    </form>
+</main>
+
+</body>
+</html>
