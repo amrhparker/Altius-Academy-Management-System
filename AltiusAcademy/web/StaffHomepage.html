@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Staff Homepage</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .header{
+                width: 100%;
+                background-color: #e1e0e1;
+                text-align: center;
+            }
+            .spacer {
+                width: 100%;
+            }
+            .logo1{
+                width: 60px;     
+                height: auto;
+            }
+            .pfp img.icon{
+                width: 60px;     
+                height: auto;
+                text-align: right;
+                white-space: nowrap;
+            }
+            body { 
+                margin: 0;  /*make sure header fills the space on top and sides*/
+                padding: 0;
+            }
+            
+            .outer{
+                margin: 70px auto;
+                border-spacing: 30px; /* Space between cells */
+            }
+            .edit{
+                background-color: #6c6b7b;
+                color: white;
+                border-radius: 12px;
+                padding: 10px 15px;
+            }
+            .section{
+                padding: 20px;
+                background-color: #e1e0e1; 
+                border-radius: 50px;
+            }
+            .section2 td{
+                padding: 10px 15px;
+            }
+            
+            .profile-section {
+                margin-right: 30px; /* Space between profile and statistics */
+            }
+            .profile-section img.icon{
+                width: 90px;     
+                height: auto;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .profile-section td{
+                text-align: center;
+            }
+            .stats-container {
+                display: flex;
+                flex-direction: column;
+                gap: 30px; /* Space between student and teacher stats */
+            }
+        </style>
+    </head>
+    <body>
+        <table class="header" border="0" cellpadding="10">
+            <tr>
+                <td>
+                    <a href="Profile.html">
+                        <img class="logo1" src="logo1.png" alt="Altuis Academy Logo">
+                    </a>
+                </td>
+                <td>Student</td>
+                <td>Class</td>
+                <td>Package</td>
+                <td>Teacher</td>
+                <td class="spacer"></td>
+                <td class="pfp">
+                    <img class="icon" src="icon.png" alt="Profile icon">
+                </td>
+            </tr>
+        </table>
+
+        <table class="outer" border="0">
+            <tr>
+                <td class="section profile-section" rowspan="2">
+                    <table border="0" class="section2">
+                        <tr>
+                            <td>
+                                <img class="icon" src="icon.png" alt="Profile icon"><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Staff Name</b>                               
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                staffemail@gmail.com
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                0123456789
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="StaffEdit.html"><button class="edit">Edit</button></a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <div class="stats-container">
+                <td class="section">
+                    <!--Student Statistics-->
+                        <table border="0" class="section2">
+                            <tr>
+                                <td>
+                                    <b>Student Statistics</b>                               
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Total Students: 100
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Highest Enrollment Grade: Form 4
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Average Attendance Rate: 85%
+                                </td>
+                            </tr>
+                        </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="section" >
+                <!--Teacher Statistics-->
+                    <table border="0" class="section2"> 
+                        <tr>
+                            <td>
+                                <b>Teacher Statistics</b>                               
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Total Active Teachers: 20
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Average Students per Teacher: 18
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Teacher with Highest Passing Rate: Lim Jia Yi
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                </div>
+            </tr>
+        </table>
+    </body>
+</html>
