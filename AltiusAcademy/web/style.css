@@ -109,10 +109,19 @@ body {
     padding: 30px;
     background-color: #e1e0e1;
     border-radius: 50px;
+    /*border-collapse: collapse;*/
     margin: 70px auto;
     width: 90%;
 /*    max-width: 1000px;*/
 }
+
+.section tr:first-child td{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+
 .section td {
     padding: 5px 15px;
 }

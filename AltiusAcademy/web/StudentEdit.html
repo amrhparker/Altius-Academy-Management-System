@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Altius Academy | Teacher Details</title>
+    <title>Altius Academy | Students Details</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
@@ -36,27 +36,40 @@
         <form action="#" method="post">
             <table class="form">
                 <tr>
-                    <td class="title" colspan="2">Edit Teacher Profile</td>
+                    <td class="title" colspan="2">Edit Student Details</td>
                 </tr>
                 <tr>
                     <td>Name:</td>
-                    <td><input type="text" id="Teacher_Name" name="Teacher_Name" style="width: 100%;" required></td>
+                    <td><input type="text" id="Student_Name" name="Student_Name" style="width: 100%;" required></td>
                 </tr>
                 <tr>
                     <td>IC: </td>
-                    <td><input type="text" id="Teacher_IC" name="Teacher_IC" style="width: 100%;" required></td>
-                </tr>
-                <tr>
-                    <td>Email: </td>
-                    <td><input type="text" id="Teacher_Email" name="Teacher_Email" placeholder="(Example: staff123@gmail.com)" style="width: 100%;" required></td>
-                </tr>
-                <tr>
-                    <td>Phone Number:</td>
-                    <td><input type="text" id="Teacher_PhoneNum" name="Teacher_PhoneNum" placeholder="(Example: 0123456789)" style="width: 100%;" required></td>
+                    <td><input type="text" id="Student_IC" name="Student_IC" style="width: 100%;" required></td>
                 </tr>
                 <tr>
                     <td>Address</td>
-                    <td><input type="password" id="Teacher_Address" name="Teacher_Address" style="width: 100%;" required></td>
+                    <td><input type="password" id="Student_Address" name="Student_Address" style="width: 100%;" required></td>
+                </tr>
+                <tr>
+                    <td>Email: </td>
+                    <td><input type="text" id="Student_Email" name="Student_Email" placeholder="(Example: staff123@gmail.com)" style="width: 100%;" required></td>
+                </tr>
+                <tr>
+                    <td>Phone Number:</td>
+                    <td><input type="text" id="Student_PhoneNum" name="Student_PhoneNum" placeholder="(Example: 0123456789)" style="width: 100%;" required></td>
+                </tr>
+                <tr>
+                    <td>Type: </td>
+                    <td>
+                        <label>
+                            <input type="radio" id="Student_Type" name="Student_Type" value="Primary">
+                            Primary Student
+                        </label>
+                        <label>
+                            <input type="radio" id="Student_Type" name="Student_Type" value="Secondary">
+                            Secondary Student
+                        </label>
+                    </td>
                 </tr>
                 <tr>
                     <td colspan="2" style="text-align:center;"><input type="submit" class="button" value="Save"></td>

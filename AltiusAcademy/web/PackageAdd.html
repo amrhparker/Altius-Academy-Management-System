@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Altius Academy | Teacher Details</title>
+    <title>Altius Academy | Add New Package</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
@@ -32,31 +32,27 @@
 
     <!-- MAIN CONTENT -->
     <main class="content">
-        <!-- PAGE CONTENT GOES HERE -->
-        <form action="#" method="post">
+        <!-- PAGE CONTENT GOES HERE --> 
+       <form action="#" method="post">
             <table class="form">
                 <tr>
-                    <td class="title" colspan="2">Edit Teacher Profile</td>
+                    <td class="title" colspan="2">Add New Package</td>
                 </tr>
                 <tr>
                     <td>Name:</td>
-                    <td><input type="text" id="Teacher_Name" name="Teacher_Name" style="width: 100%;" required></td>
+                    <td><input type="text" id="Package_Name" name="Package_Name" style="width: 100%;" required></td>
                 </tr>
                 <tr>
-                    <td>IC: </td>
-                    <td><input type="text" id="Teacher_IC" name="Teacher_IC" style="width: 100%;" required></td>
+                    <td>Fee: </td>
+                    <td><input type="number" id="Package_Fee" name="Package_Fee" placeholder="(Example: 150.00)" style="width: 100%;" required></td>
                 </tr>
                 <tr>
-                    <td>Email: </td>
-                    <td><input type="text" id="Teacher_Email" name="Teacher_Email" placeholder="(Example: staff123@gmail.com)" style="width: 100%;" required></td>
+                    <td>Duration:</td>
+                    <td><input type="text" id="Package_Duration" name="Package_Duration" placeholder="(Example: 5 hours)" style="width: 100%;" required></td>
                 </tr>
                 <tr>
-                    <td>Phone Number:</td>
-                    <td><input type="text" id="Teacher_PhoneNum" name="Teacher_PhoneNum" placeholder="(Example: 0123456789)" style="width: 100%;" required></td>
-                </tr>
-                <tr>
-                    <td>Address</td>
-                    <td><input type="password" id="Teacher_Address" name="Teacher_Address" style="width: 100%;" required></td>
+                    <td>Subjects: </td>
+                    <td><input type="text" id="Package_Username" name="Package_Subjects" placeholder="(Separate with comma)" style="width: 100%;" required></td>
                 </tr>
                 <tr>
                     <td colspan="2" style="text-align:center;"><input type="submit" class="button" value="Save"></td>
@@ -64,6 +60,5 @@
             </table>
         </form>
     </main>
-
 </body>
 </html>
