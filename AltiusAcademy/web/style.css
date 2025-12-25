@@ -82,6 +82,11 @@ body {
     background-color: #e753fe;
 }
 
+.add-button {
+    font-size: 16px;
+    padding: 6px 14px; /* optional: keeps button balanced */
+}
+
 /* ===== FORM ===== */
 .form {
     padding: 30px;
@@ -104,6 +109,7 @@ body {
     width: 95%;
     background-color: #450050;
     border-radius: 22px;          
+    border-collapse: collapse;
     border: 1px solid #ffffff;
     color: #ffffff;
     padding: 18px;               
@@ -159,4 +165,57 @@ body {
     font-size: 24px;
     font-weight: bold;
     color: #ffffff;
+}
+
+/* ===== PACKAGE CARD ===== */
+.package-card {
+    background-color: #450050;
+    color: #ffffff;
+    border-radius: 22px;
+    padding: 22px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+
+/* ===== CARD TITLE ===== */
+.package-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 8px;
+}
+
+/* ===== CARD DETAILS ===== */
+.package-card p {
+    font-size: 14px;
+    margin: 6px 0;
+    line-height: 1.4;
+}
+
+/* ===== CARD ACTIONS ===== */
+.card-actions {
+    margin-top: 18px;
+    text-align: center;
+}
+
+.card-actions .button {
+    margin: 0 6px;
+}
+
+/* ===== PAGE TITLE ===== */
+.page-title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ===== PACKAGE GRID ===== */
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
 }
