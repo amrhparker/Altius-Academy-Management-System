@@ -7,6 +7,8 @@
 
 body {
     background-color: #f5f6fa;
+    margin: 0;  /*make sure header fills the space on top and sides*/
+    padding: 0;
 }
 
 /* ===== HEADER ===== */
@@ -22,6 +24,12 @@ body {
 /* LOGO */
 .logo img {
     height: 40px;
+    width: auto;
+    transition: height 0.3s ease;
+}
+.logo a:hover img{
+    height: 50px;
+    width: auto;
 }
 
 /* NAV MENU */
@@ -48,6 +56,9 @@ body {
     font-size: 28px;
     cursor: pointer;
 }
+.user-icon2{
+    font-size: 60px;
+}
 
 /* ===== MAIN CONTENT ===== */
 .content {
@@ -59,3 +70,71 @@ body {
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     padding: 30px;
 }
+
+/*Button*/
+.button {
+    display: inline-block;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #6c6b7b;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.button:hover {
+    background-color: #4f4e5c;
+}
+
+.form{
+    padding: 30px;
+    background-color: #e1e0e1;
+    border-radius: 50px;
+    margin: 70px auto;
+    width: 90;
+    max-width: 600px;
+}
+.form td {
+    padding: 5px 15px;
+}
+.form input{
+    box-sizing: border-box;
+}
+/*Section*/
+.section{
+    padding: 30px;
+    background-color: #e1e0e1;
+    border-radius: 50px;
+    margin: 70px auto;
+    width: 90%;
+/*    max-width: 1000px;*/
+}
+.section td {
+    padding: 5px 15px;
+}
+.section input{
+    box-sizing: border-box;
+}
+
+/*Title*/
+.title{
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.action-cell {
+    text-align: center;        /* pushes content to the right */
+    white-space: nowrap;      /* prevents wrapping */
+}
+
