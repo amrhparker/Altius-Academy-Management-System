@@ -70,6 +70,9 @@ body {
 .button {
     background-color: #8c249c;
     color: #ffffff;
+    font-size: 14px;          /* choose your size */
+    font-family: inherit;    /* VERY important */
+    line-height: 1;
     padding: 8px 16px;
     border-radius: 18px;
     border: 1px solid #ffffff;
@@ -87,6 +90,9 @@ body {
     padding: 6px 14px; /* optional: keeps button balanced */
 }
 
+button.button {
+    cursor: pointer;
+}
 /* ===== FORM ===== */
 .form {
     padding: 30px;
@@ -197,10 +203,16 @@ body {
 .card-actions {
     margin-top: 18px;
     text-align: center;
+    display: flex;
+    gap: 10px;
 }
 
 .card-actions .button {
     margin: 0 6px;
+}
+
+.card-actions form {
+    margin: 0;
 }
 
 /* ===== PAGE TITLE ===== */

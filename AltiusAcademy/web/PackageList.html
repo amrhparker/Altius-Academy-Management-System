@@ -45,8 +45,14 @@
                 <p><strong>Subjects:</strong> BM, English, Mathematics, Science, Sejarah</p>
 
                 <div class="card-actions">
-                    <a href="PackageEdit.html" class="button">Edit</a>
-                    <a href="PackageDelete.html" class="button">Delete</a>
+                    <a href="PackageEditServlet?Package_ID=1" class="button">Edit</a>
+
+                    <form action="PackageDeleteServlet" method="post"
+                          onsubmit="return confirm('Are you sure you want to delete this package?');"
+                          style="display:inline;">
+                        <input type="hidden" name="Package_ID" value="1">
+                        <button type="submit" class="button">Delete</button>
+                    </form>
                 </div>
             </div>
 
@@ -59,8 +65,14 @@
                 <p><strong>Subjects:</strong> BM, English, Mathematics, Science, Sejarah, Geography</p>
 
                 <div class="card-actions">
-                    <a href="PackageEdit.html" class="button">Edit</a>
-                    <a href="PackageDelete.html" class="button">Delete</a>
+                    <a href="PackageEditServlet?Package_ID=2" class="button">Edit</a>
+
+                    <form action="PackageDeleteServlet" method="post"
+                          onsubmit="return confirm('Are you sure you want to delete this package?');"
+                          style="display:inline;">
+                        <input type="hidden" name="Package_ID" value="2">
+                        <button type="submit" class="button">Delete</button>
+                    </form>
                 </div>
             </div>
 
@@ -73,8 +85,14 @@
                 <p><strong>Subjects:</strong> BM, English, Mathematics, Science, Sejarah, Additional Mathematics, Physics, et al.</p>
 
                 <div class="card-actions">
-                    <a href="PackageEdit.html" class="button">Edit</a>
-                    <a href="PackageDelete.html" class="button">Delete</a>
+                    <a href="PackageEditServlet?Package_ID=3" class="button">Edit</a>
+
+                    <form action="PackageDeleteServlet" method="post"
+                          onsubmit="return confirm('Are you sure you want to delete this package?');"
+                          style="display:inline;">
+                        <input type="hidden" name="Package_ID" value="3">
+                        <button type="submit" class="button">Delete</button>
+                    </form>
                 </div>
             </div>
 
@@ -87,8 +105,14 @@
                 <p><strong>Subjects:</strong> Additional Mathematics, Physics, Chemistry, Biology, Accounting, Economics, et al.</p>
 
                 <div class="card-actions">
-                    <a href="PackageEdit.html" class="button">Edit</a>
-                    <a href="PackageDelete.html" class="button">Delete</a>
+                    <a href="PackageEditServlet?Package_ID=4" class="button">Edit</a>
+
+                    <form action="PackageDeleteServlet" method="post"
+                          onsubmit="return confirm('Are you sure you want to delete this package?');"
+                          style="display:inline;">
+                        <input type="hidden" name="Package_ID" value="4">
+                        <button type="submit" class="button">Delete</button>
+                    </form>
                 </div>
             </div>
         </div>
