@@ -8,12 +8,10 @@
 </head>
 
 <body>
-
-    <!-- HEADER -->
     <header class="top-bar">
         <div class="logo">
             <a href="StaffHomepage.html">
-                <img src="images/logo1.png" alt="Altius Academy" >        
+                <img src="images/logo1.png" alt="Altius Academy">
             </a>
         </div>
 
@@ -25,86 +23,100 @@
             <a href="report.html">Report</a>
         </nav>
 
-        <div class="user-icon">
-            <span>👤</span>
-        </div>
+        <div class="user-icon">👤</div>
     </header>
 
     <!-- MAIN CONTENT -->
     <main class="content">
-        <!-- PAGE CONTENT GOES HERE -->
-        <table border="1" class="section">
-            <tr>
-                <td class="title" colspan="5">Packages List</td>
-                <td class="action-cell"><a href="PackageAdd.html" class="button add-btn">Add</a></td>
-            </tr>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Fee</th>
-                <th>Duration</th>
-                <th>Subjects</th>
-                <th>Action</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Math</td>
-                <td>150.00</td>
-                <td>5 hours</td>
-                <td>Mathematics, Additional Mathematics</td>
-                <td class="action-cell"><a href="PackageEdit.html" class="button">Edit</a> <a href="StudentDelete.html" class="button"> Delete</a></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td class="action-cell"><a href="PackageEdit.html" class="button">Edit</a> <a href="PackageDelete.html" class="button"> Delete</a></td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td class="action-cell"><a href="PackageEdit.html" class="button">Edit</a> <a href="PackageDelete.html" class="button"> Delete</a></td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td class="action-cell"><a href="PackageEdit.html" class="button">Edit</a> <a href="PackageDelete.html" class="button"> Delete</a></td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td class="action-cell"><a href="PackageEdit.html" class="button">Edit</a> <a href="PackageDelete.html" class="button"> Delete</a></td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td class="action-cell"><a href="PackageEdit.html" class="button">Edit</a> <a href="PackageDelete.html" class="button"> Delete</a></td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td class="action-cell"><a href="PackageEdit.html" class="button">Edit</a> <a href="PackageDelete.html" class="button"> Delete</a></td>
-            </tr>
-            
-        </table>
+
+        <div class="page-title">
+            Packages List
+            <a href="PackageAdd.html" class="button add-button">Add</a>
+        </div>
+
+        <div class="package-grid">
+
+            <!-- CARD 1 -->
+            <div class="package-card">
+                <h3 class="package-title">Core Subjects (Primary)</h3>
+
+                <p><strong>Fee:</strong> RM 180.00 / month</p>
+                <p><strong>Duration:</strong> 8 hours / month</p>
+                <p><strong>Subjects:</strong> BM, English, Mathematics, Science, Sejarah</p>
+
+                <div class="card-actions">
+                    <a href="PackageEditServlet?Package_ID=1" class="button">Edit</a>
+
+                    <form action="PackageDeleteServlet" method="post"
+                          onsubmit="return confirm('Are you sure you want to delete this package?');"
+                          style="display:inline;">
+                        <input type="hidden" name="Package_ID" value="1">
+                        <button type="submit" class="button">Delete</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="package-card">
+                <h3 class="package-title">Core Subjects (Secondary)</h3>
+
+                <p><strong>Fee:</strong> RM 250.00 / month</p>
+                <p><strong>Duration:</strong> 10 hours / month</p>
+                <p><strong>Subjects:</strong> BM, English, Mathematics, Science, Sejarah, Geography</p>
+
+                <div class="card-actions">
+                    <a href="PackageEditServlet?Package_ID=2" class="button">Edit</a>
+
+                    <form action="PackageDeleteServlet" method="post"
+                          onsubmit="return confirm('Are you sure you want to delete this package?');"
+                          style="display:inline;">
+                        <input type="hidden" name="Package_ID" value="2">
+                        <button type="submit" class="button">Delete</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="package-card">
+                <h3 class="package-title">Core + Electives Subjects</h3>
+
+                <p><strong>Fee:</strong> RM 380.00 / month</p>
+                <p><strong>Duration:</strong> 16 hours / month</p>
+                <p><strong>Subjects:</strong> BM, English, Mathematics, Science, Sejarah, Additional Mathematics, Physics, et al.</p>
+
+                <div class="card-actions">
+                    <a href="PackageEditServlet?Package_ID=3" class="button">Edit</a>
+
+                    <form action="PackageDeleteServlet" method="post"
+                          onsubmit="return confirm('Are you sure you want to delete this package?');"
+                          style="display:inline;">
+                        <input type="hidden" name="Package_ID" value="3">
+                        <button type="submit" class="button">Delete</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="package-card">
+                <h3 class="package-title"> Electives Subjects</h3>
+
+                <p><strong>Fee:</strong> RM 200.00 / month</p>
+                <p><strong>Duration:</strong> 8 hours / month</p>
+                <p><strong>Subjects:</strong> Additional Mathematics, Physics, Chemistry, Biology, Accounting, Economics, et al.</p>
+
+                <div class="card-actions">
+                    <a href="PackageEditServlet?Package_ID=4" class="button">Edit</a>
+
+                    <form action="PackageDeleteServlet" method="post"
+                          onsubmit="return confirm('Are you sure you want to delete this package?');"
+                          style="display:inline;">
+                        <input type="hidden" name="Package_ID" value="4">
+                        <button type="submit" class="button">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </main>
+
 </body>
 </html>
-

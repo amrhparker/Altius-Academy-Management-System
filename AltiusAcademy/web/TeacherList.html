@@ -36,7 +36,7 @@
         <table border="1" class="section">
             <tr>
                 <td class="title" colspan="6">Teachers List</td>
-                <td class="action-cell"><a href="TeacherAdd.html" class="button add-btn">Add</a></td>
+                <td class="action-cell"><a href="TeacherAdd.html" class="button">Add</a></td>
             </tr>
             <tr>
                 <th>ID</th>
@@ -54,7 +54,16 @@
                 <td>jiayi991@gmail.com</td>
                 <td>0123456789</td>
                 <td>No. 12, Jalan Harmoni 3, Taman Seri Maju, 43000 Kajang Selangor</td>
-                <td class="action-cell"><a href="TeacherEdit.html" class="button">Edit</a> <a href="TeacherDelete.html" class="button"> Delete</a></td>
+                <td class="action-cell">
+                    <a href="TeacherEditServlet?Teacher_ID=3" class="button">Edit</a>
+
+                    <form action="TeacherDeleteServlet" method="post"
+                          onsubmit="return confirm('Delete this teacher?');"
+                          style="display:inline;">
+                        <input type="hidden" name="Teacher_ID" value="3">
+                        <button type="submit" class="button">Delete</button>
+                    </form>
+                </td>
             </tr>
             <tr>
                 <td>2</td>
@@ -63,7 +72,16 @@
                 <td>----------</td>
                 <td>----------</td>
                 <td>----------</td>
-                <td class="action-cell"><a href="TeacherEdit.html" class="button">Edit</a> <a href="TeacherDelete.html" class="button"> Delete</a></td>
+                <td class="action-cell">
+                    <a href="TeacherEditServlet?Teacher_ID=3" class="button">Edit</a>
+
+                    <form action="TeacherDeleteServlet" method="post"
+                          onsubmit="return confirm('Delete this teacher?');"
+                          style="display:inline;">
+                        <input type="hidden" name="Teacher_ID" value="3">
+                        <button type="submit" class="button">Delete</button>
+                    </form>
+                </td>
             </tr>
             <tr>
                 <td>3</td>
@@ -72,7 +90,16 @@
                 <td>----------</td>
                 <td>----------</td>
                 <td>----------</td>
-                <td class="action-cell"><a href="TeacherEdit.html" class="button">Edit</a> <a href="TeacherDelete.html" class="button"> Delete</a></td>
+                <td class="action-cell">
+                    <a href="TeacherEditServlet?Teacher_ID=3" class="button">Edit</a>
+
+                    <form action="TeacherDeleteServlet" method="post"
+                          onsubmit="return confirm('Delete this teacher?');"
+                          style="display:inline;">
+                        <input type="hidden" name="Teacher_ID" value="3">
+                        <button type="submit" class="button">Delete</button>
+                    </form>
+                </td>
             </tr>
             <tr>
                 <td>4</td>
@@ -81,7 +108,16 @@
                 <td>----------</td>
                 <td>----------</td>
                 <td>----------</td>
-                <td class="action-cell"><a href="TeacherEdit.html" class="button">Edit</a> <a href="TeacherDelete.html" class="button"> Delete</a></td>
+                <td class="action-cell">
+                    <a href="TeacherEditServlet?Teacher_ID=3" class="button">Edit</a>
+
+                    <form action="TeacherDeleteServlet" method="post"
+                          onsubmit="return confirm('Delete this teacher?');"
+                          style="display:inline;">
+                        <input type="hidden" name="Teacher_ID" value="3">
+                        <button type="submit" class="button">Delete</button>
+                    </form>
+                </td>
             </tr>
             <tr>
                 <td>5</td>
@@ -90,7 +126,16 @@
                 <td>----------</td>
                 <td>----------</td>
                 <td>----------</td>
-                <td class="action-cell"><a href="TeacherEdit.html" class="button">Edit</a> <a href="TeacherDelete.html" class="button"> Delete</a></td>
+                <td class="action-cell">
+                    <a href="TeacherEditServlet?Teacher_ID=3" class="button">Edit</a>
+
+                    <form action="TeacherDeleteServlet" method="post"
+                          onsubmit="return confirm('Delete this teacher?');"
+                          style="display:inline;">
+                        <input type="hidden" name="Teacher_ID" value="3">
+                        <button type="submit" class="button">Delete</button>
+                    </form>
+                </td>
             </tr>
             <tr>
                 <td>6</td>
@@ -99,7 +144,16 @@
                 <td>----------</td>
                 <td>----------</td>
                 <td>----------</td>
-                <td class="action-cell"><a href="TeacherEdit.html" class="button">Edit</a> <a href="TeacherDelete.html" class="button"> Delete</a></td>
+                <td class="action-cell">
+                    <a href="TeacherEditServlet?Teacher_ID=3" class="button">Edit</a>
+
+                    <form action="TeacherDeleteServlet" method="post"
+                          onsubmit="return confirm('Delete this teacher?');"
+                          style="display:inline;">
+                        <input type="hidden" name="Teacher_ID" value="3">
+                        <button type="submit" class="button">Delete</button>
+                    </form>
+                </td>
             </tr>
             <tr>
                 <td>7</td>
@@ -108,9 +162,17 @@
                 <td>----------</td>
                 <td>----------</td>
                 <td>----------</td>
-                <td class="action-cell"><a href="TeacherEdit.html" class="button">Edit</a> <a href="TeacherDelete.html" class="button"> Delete</a></td>
-            </tr>
-            
+                <td class="action-cell">
+                    <a href="TeacherEditServlet?Teacher_ID=3" class="button">Edit</a>
+
+                    <form action="TeacherDeleteServlet" method="post"
+                          onsubmit="return confirm('Delete this teacher?');"
+                          style="display:inline;">
+                        <input type="hidden" name="Teacher_ID" value="3">
+                        <button type="submit" class="button">Delete</button>
+                    </form>
+                </td>
+            </tr>   
         </table>
     </main>
 </body>

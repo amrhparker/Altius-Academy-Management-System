@@ -36,7 +36,7 @@
         <table border="1" class="section">
             <tr>
                 <td class="title" colspan="6">Classes List</td>
-                <td class="action-cell"><a href="ClassAdd.html" class="button add-btn">Add</a></td>
+                <td class="action-cell"><a href="ClassAdd.html" class="button">Add</a></td>
             </tr>
             <tr>
                 <th>ID</th>
@@ -50,65 +50,128 @@
             <tr>
                 <td>1</td>
                 <td>5A</td>
-                <td>10:00</td>
+                <td>10:00 - 11:30</td>
                 <td>Monday</td>
-                <td>Mathematics, Additional Mathematics</td>
+                <td>Mathematics</td>
                 <td>Lim Jia Yi</td>
-                <td class="action-cell"><a href="ClassEdit.html" class="button">Edit</a> <a href="StudentDelete.html" class="button"> Delete</a></td>
+                <td class="action-cell">
+                    <a href="ClassEdit.html" class="button">Edit</a>
+
+                    <form action="ClassDeleteServlet" method="post"
+                          onsubmit="return confirm('Are you sure you want to delete this class?');"
+                          style="display:inline;">
+                        <input type="hidden" name="Class_ID" value="1">
+                        <button type="submit" class="button">Delete</button>
+                    </form>
+                </td>
             </tr>
             <tr>
                 <td>2</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td class="action-cell"><a href="ClassEdit.html" class="button">Edit</a> <a href="ClassDelete.html" class="button"> Delete</a></td>
+                <td>4B</td>
+                <td>14:00 – 15:30</td>
+                <td>Tuesday</td>
+                <td>English</td>
+                <td>Tan Wei Ling</td>
+                <td class="action-cell">
+                    <a href="ClassEdit.html" class="button">Edit</a>
+
+                    <form action="ClassDeleteServlet" method="post"
+                          onsubmit="return confirm('Are you sure you want to delete this class?');"
+                          style="display:inline;">
+                        <input type="hidden" name="Class_ID" value="2">
+                        <button type="submit" class="button">Delete</button>
+                    </form>
+                </td>
             </tr>
             <tr>
                 <td>3</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td class="action-cell"><a href="ClassEdit.html" class="button">Edit</a> <a href="ClassDelete.html" class="button"> Delete</a></td>
+                <td>Form 2B </td>
+                <td>16:30 – 18:00 </td>
+                <td>Friday </td>
+                <td>Bahasa Melayu </td>
+                <td>Ahmad Faizal </td>
+                <td class="action-cell">
+                    <a href="ClassEdit.html" class="button">Edit</a>
+
+                    <form action="ClassDeleteServlet" method="post"
+                          onsubmit="return confirm('Are you sure you want to delete this class?');"
+                          style="display:inline;">
+                        <input type="hidden" name="Class_ID" value="3">
+                        <button type="submit" class="button">Delete</button>
+                    </form>
+                </td>
             </tr>
             <tr>
                 <td>4</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td class="action-cell"><a href="ClassEdit.html" class="button">Edit</a> <a href="ClassDelete.html" class="button"> Delete</a></td>
+                <td>Form 1A</td>
+                <td>14:00 – 15:30</td>
+                <td>Thursday</td>
+                <td>Mathematics</td>
+                <td>Wong Kah Min</td>
+                <td class="action-cell">
+                    <a href="ClassEdit.html" class="button">Edit</a>
+
+                    <form action="ClassDeleteServlet" method="post"
+                          onsubmit="return confirm('Are you sure you want to delete this class?');"
+                          style="display:inline;">
+                        <input type="hidden" name="Class_ID" value="4">
+                        <button type="submit" class="button">Delete</button>
+                    </form>
+                </td>
             </tr>
             <tr>
                 <td>5</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td class="action-cell"><a href="ClassEdit.html" class="button">Edit</a> <a href="ClassDelete.html" class="button"> Delete</a></td>
+                <td>Form 4 Sci</td>
+                <td>14:00 – 16:00</td>
+                <td>Saturday</td>
+                <td>Physics</td>
+                <td>Ong Wei Jian</td>
+                <td class="action-cell">
+                    <a href="ClassEdit.html" class="button">Edit</a>
+
+                    <form action="ClassDeleteServlet" method="post"
+                          onsubmit="return confirm('Are you sure you want to delete this class?');"
+                          style="display:inline;">
+                        <input type="hidden" name="Class_ID" value="5">
+                        <button type="submit" class="button">Delete</button>
+                    </form>
+                </td>
             </tr>
             <tr>
                 <td>6</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td class="action-cell"><a href="ClassEdit.html" class="button">Edit</a> <a href="ClassDelete.html" class="button"> Delete</a></td>
+                <td>Form 5 Acc</td>
+                <td>10:00 – 12:00</td>
+                <td>Sunday</td>
+                <td>Accounting</td>
+                <td>Lee Pei Shan</td>
+                <td class="action-cell">
+                    <a href="ClassEdit.html" class="button">Edit</a>
+
+                    <form action="ClassDeleteServlet" method="post"
+                          onsubmit="return confirm('Are you sure you want to delete this class?');"
+                          style="display:inline;">
+                        <input type="hidden" name="Class_ID" value="6">
+                        <button type="submit" class="button">Delete</button>
+                    </form>
+                </td>
             </tr>
             <tr>
                 <td>7</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td class="action-cell"><a href="ClassEdit.html" class="button">Edit</a> <a href="ClassDelete.html" class="button"> Delete</a></td>
+                <td>Form 4 Sci</td>
+                <td>16:00 - 18:00</td>
+                <td>Sunday</td>
+                <td>Biology</td>
+                <td>Nur Aisyah</td>
+                <td class="action-cell">
+                    <a href="ClassEdit.html" class="button">Edit</a>
+
+                    <form action="ClassDeleteServlet" method="post"
+                          onsubmit="return confirm('Are you sure you want to delete this class?');"
+                          style="display:inline;">
+                        <input type="hidden" name="Class_ID" value="7">
+                        <button type="submit" class="button">Delete</button>
+                    </form>
+                </td>
             </tr>
             
         </table>

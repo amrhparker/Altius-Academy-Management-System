@@ -36,7 +36,7 @@
         <table border="1" class="section">
             <tr>
                 <td class="title" colspan="7">Students List</td>
-                <td class="action-cell"><a href="StudentAdd.html" class="button add-btn">Add</a></td>
+                <td class="action-cell"><a href="StudentAdd.html" class="button">Add</a></td>
             </tr>
             <tr>
                 <th>ID</th>
@@ -56,7 +56,16 @@
                 <td>aiman0901@gmail.com</td>
                 <td>0123456789</td>
                 <td>Primary Student</td>
-                <td class="action-cell"><a href="StudentEdit.html" class="button">Edit</a> <a href="StudentDelete.html" class="button"> Delete</a></td>
+                <td class="action-cell">
+                    <a href="StudentEditServlet?Student_ID=1" class="button">Edit</a>
+
+                    <form action="StudentDeleteServlet" method="post"
+                          onsubmit="return confirm('Delete this student?');"
+                          style="display:inline;">
+                        <input type="hidden" name="studentId" value="5">
+                        <button type="submit" class="button">Delete</button>
+                    </form>
+                </td>
             </tr>
             <tr>
                 <td>2</td>
