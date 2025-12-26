@@ -27,128 +27,67 @@
 
         <!-- MAIN CONTENT -->
         <main class="content">
-            <style>            
-                .outer{
-                    margin: 70px auto;
-                    border-spacing: 30px; /* Space between cells */
-                }
-                .sct{
-                    padding: 20px;
-                    background-color: #450050; 
-                    border-radius: 50px;
-                    color: white;
-                }
-                .sct2 td{
-                    padding: 10px 15px;
-                }
+             <!-- DASHBOARD GRID -->
+            <div class="dashboard">
 
-                .profile-section {
-                    margin-right: 30px; /* Space between profile and statistics */
-                }
-                .profile-section img.icon{
-                    width: 90px;     
-                    height: auto;
-                    display: block;
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-                .profile-section td{
-                    text-align: center;
-                }
-                .stats-container {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 30px; /* Space between student and teacher stats */
-                }
-            </style>
-            <!-- PAGE CONTENT GOES HERE -->
-            <table class="outer" border="0">
-            <tr>
-                <td class="sct profile-section" rowspan="2">
-                    <table border="0" class="sct2">
-                        <tr>
-                            <td>
-                                <b>Staff Profile</b>                               
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Staff Name
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                staffemail@gmail.com
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                0123456789
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="StaffEdit.html" class="button">Edit</a>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-                <div class="stats-container">
-                <td class="sct">
-                    <!--Student Statistics-->
-                        <table border="0" class="sct2">
-                            <tr>
-                                <td>
-                                    <b>Student Statistics</b>                               
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Total Students: 100
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Highest Enrollment Grade: Form 4
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Average Attendance Rate: 85%
-                                </td>
-                            </tr>
-                        </table>
-                </td>
-            </tr>
-            <tr>
-                <td class="sct" >
-                <!--Teacher Statistics-->
-                    <table border="0" class="sct2"> 
-                        <tr>
-                            <td>
-                                <b>Teacher Statistics</b>                               
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Total Active Teachers: 20
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Average Students per Teacher: 18
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Teacher with Highest Passing Rate: Lim Jia Yi
-                            </td>
-                        </tr>
-                    </table>
-                </td>
+                <!-- LEFT COLUMN -->
+                <div class="column">
+
+                    <!-- Profile Header -->
+                    <div class="section-title">
+                        👩‍💻 Profile Overview
+                    </div>
+
+                    <!-- Staff Profile Card -->
+                    <div class="card profile-card">
+                        <div class="avatar">👩‍💻</div>
+
+                        <h2>Staff Profile</h2>
+
+                        <p class="name">Staff Name</p>
+                        <p class="email">staffemail@gmail.com</p>
+                        <p class="phone">0123456789</p>
+
+                        <a href="StaffEdit.html" class="btn">
+                            Edit Profile
+                        </a>
+                    </div>
+
                 </div>
-            </tr>
-        </table>
+
+                <!-- RIGHT COLUMN -->
+                <div class="column">
+
+                    <!-- Statistics Header -->
+                    <div class="section-title">
+                        📊 Academy Statistics
+                    </div>
+
+                    <!-- Statistics Cards -->
+                    <div class="stats-column">
+
+                        <!-- Student Statistics -->
+                        <div class="card">
+                            <h3>🎓 Student Statistics</h3>
+                            <p>Total Students: <span>100</span></p>
+                            <p>Highest Enrollment Grade: <span>Form 4</span></p>
+                            <p>Average Attendance Rate: <span>85%</span></p>
+                        </div>
+
+                        <!-- Teacher Statistics -->
+                        <div class="card">
+                            <h3>👩‍🏫 Teacher Statistics</h3>
+                            <p>Total Active Teachers: <span>20</span></p>
+                            <p>Average Students per Teacher: <span>18</span></p>
+                            <p>Highest Passing Rate: <span>Lim Jia Yi</span></p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
         </main>        
     </body>
 </html>
+            

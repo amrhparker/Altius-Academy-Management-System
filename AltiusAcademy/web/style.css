@@ -239,3 +239,102 @@ button.button {
     gap: 25px;
 }
 
+/* ===== STAFF HOMEPAGE LAYOUT ===== */
+/* ===== Section Headers ===== */
+.section-header {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    background: #450050;
+    color: white;
+    padding: 20px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* ===== Dashboard Layout ===== */
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 30px;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+
+/* ===== Cards ===== */
+.card {
+    background: #450050;
+    color: white;
+    padding: 30px;
+    border-radius: 40px;
+}
+
+.card h2,
+.card h3 {
+    margin-bottom: 20px;
+}
+
+.card p {
+    margin-bottom: 12px;
+}
+
+.card span {
+    font-weight: bold;
+}
+
+/* ===== Profile Card ===== */
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   /* ✅ THIS fixes the misalignment */
+    text-align: center;
+}
+
+.avatar {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    border-radius: 20px;
+    background: #7b2c85;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #9a3ca5;
+}
+
+/* ===== Stats Column ===== */
+.stats-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .section-header,
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+}
