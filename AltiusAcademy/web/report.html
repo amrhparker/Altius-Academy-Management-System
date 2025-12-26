@@ -5,6 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* stack vertically */
+        .report-stack-full {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            width: 100%;
+        }
+
+        /* make card full width */
+        .full-card {
+            width: 100%;
+        }
+
+        /* align text & button to left */
+        .full-card p,
+        .full-card .card-actions {
+            text-align: left;
+        }
+</style>
+
 </head>
 
 <body>
@@ -35,18 +56,15 @@
         <span>Reports Overview</span>
     </div>
 
-    <p style="text-align:center; margin-bottom:35px; color:#555;">
-        Choose a report to view detailed information.
-    </p>
-
+    
     <!-- CENTER WRAPPER -->
     <div style="display:flex; justify-content:center;">
 
-        <!-- REPORT GRID -->
-        <div class="package-grid" style="max-width:700px; width:100%;">
+        <!-- REPORT GRID (FULL WIDTH, LEFT ALIGN) -->
+        <div class="package-grid report-stack-full">
 
             <!-- FINANCIAL REPORT -->
-            <div class="package-card">
+            <div class="package-card full-card">
                 <div class="package-title">💰 Financial Report</div>
 
                 <p>• Student payments</p>
@@ -61,7 +79,7 @@
             </div>
 
             <!-- ATTENDANCE REPORT -->
-            <div class="package-card">
+            <div class="package-card full-card">
                 <div class="package-title">📅 Attendance Report</div>
 
                 <p>• Student attendance</p>
