@@ -1,110 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Financial Report | Altius Academy</title>
+    <title>Attendance Report | Altius Academy</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-
+    
     <style>
-        .financial-report {
-            padding: 40px 20px;
-            background: #f7f9fc;
-            min-height: calc(100vh - 80px);
+    @media print {
+        body * {
+            visibility: hidden; /* hide everything */
         }
 
-        .financial-report h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 30px;
-            color: #333;
+        .attendance-report, .attendance-report * {
+            visibility: visible; /* only report visible */
         }
 
-        /* Filter */
-        .report-filter {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-
-        .report-filter input {
-            padding: 8px 12px;
-            font-size: 14px;
-        }
-
-        .report-filter button {
-            padding: 9px 20px;
-            background-color: #6a5acd;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .report-filter button:hover {
-            background-color: #5b4bcc;
-        }
-
-        /* Summary cards */
-        .summary-cards {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-
-        .summary-card {
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        .summary-card p {
-            font-size: 14px;
-            color: #666;
-        }
-
-        .summary-card h3 {
-            margin-top: 10px;
-            font-size: 22px;
-            color: #333;
-        }
-
-        /* Table */
-        table {
+        .attendance-report {
+            position: absolute;
+            left: 0;
+            top: 0;
             width: 100%;
-            border-collapse: collapse;
-            background: #fff;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: center;
-            font-size: 14px;
+        .print-btn {
+            display: none;
         }
-
-        th {
-            background-color: #e6e6e6;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .summary-cards {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .summary-cards {
-                grid-template-columns: 1fr;
-            }
-        }
+    }
     </style>
 </head>
 
@@ -130,25 +52,70 @@
 </header>
 
 <!-- MAIN CONTENT -->
-<main class="financial-report">
-    <h2>Attendance Report</h2>
+<main class="content attendance-report">
 
-    <!-- Filter -->
-    <div class="report-filter">
-      
-        
-        <form action="/attendance_report" method="GET">
-        <label for="reportPeriod">Report Period:</label>
-        <input type="month" id="reportPeriod" name="reportPeriod" required />
-        <button type="submit">Generate</button>
-    </form>
+    <!-- PAGE TITLE -->
+    <div class="page-title">Attendance Report</div>
+
+    <!-- FILTER FORM -->
+    <div class="form">
+        <form method="GET" style="text-align:center;">
+            <label>Report Period:</label>
+            <input type="month" name="month" required>
+            <button class="button">Generate</button>
+            <a href="AttendanceReportPDFServlet" onclick="window.print()" class="button print-btn">Print</a>
+        </form>
     </div>
 
-    
+    <!-- SUMMARY CARDS AT TOP -->
+    <div class="package-grid" style="margin-bottom: 30px;">
+        <div class="package-card">
+            <div class="package-title">Total Classes</div>
+            <p>15</p>
+        </div>
+        <div class="package-card">
+            <div class="package-title">Total Students</div>
+            <p>85</p>
+        </div>
+        <div class="package-card">
+            <div class="package-title">Total Present</div>
+            <p>78</p>
+        </div>
+        <div class="package-card">
+            <div class="package-title">Total Absent</div>
+            <p>7</p>
+        </div>
+    </div>
 
-   
+    <!-- DETAIL TABLE -->
+    <div class="section">
+        <div class="table-title">Attendance Details</div>
 
-   
+        <table>
+            <thead>
+                <tr>
+                    <th>Student</th>
+                    <th>Class</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ahmad Ali</td>
+                    <td>Science Class</td>
+                    <td>2025-12-01</td>
+                    <td>Present</td>
+                </tr>
+                <tr>
+                    <td>Siti Aminah</td>
+                    <td>Math Class</td>
+                    <td>2025-12-01</td>
+                    <td>Absent</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
 </main>
 

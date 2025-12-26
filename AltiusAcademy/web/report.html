@@ -5,157 +5,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        /* ===== CONTENT ===== */
-        .report-home {
-            padding: 50px 20px;
-            min-height: calc(100vh - 80px); /* minus header height */
-            background: #f7f9fc;
-        }
-
-        .report-home h2 {
-            text-align: center;
-            margin-bottom: 50px;
-            font-size: 32px;
-            color: #333;
-            font-weight: 600;
-        }
-
-        /* Flex container untuk dua card */
-        .report-containers {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
-
-        /* Container box */
-        .report-container {
-            flex: 1 1 250px;
-            display: flex;
-            justify-content: center;
-        }
-
-        /* Card style */
-        .report-card {
-            background: linear-gradient(135deg, #6a5acd, #4a90e2);
-            color: #fff;
-            padding: 50px 30px;
-            text-align: center;
-            border-radius: 15px;
-            width: 100%;
-            max-width: 280px;
-            text-decoration: none;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-            transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-            font-family: Arial, sans-serif;
-        }
-
-        .report-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-            background: linear-gradient(135deg, #5b4bcc, #357ab7);
-        }
-
-        .report-card h3 {
-            margin-bottom: 15px;
-            font-size: 22px;
-            font-weight: 600;
-        }
-
-        .report-card p {
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
-        /* Optional emoji inside card */
-        .report-card .icon {
-            font-size: 40px;
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .report-containers {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-        
-        .generate-btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 10px 22px;
-    background-color: #ffffff;
-    color: #4a90e2;
-    font-size: 14px;
-    font-weight: 600;
-    border-radius: 25px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.generate-btn:hover {
-    background-color: #f0f0f0;
-    transform: scale(1.05);
-}
-
-    </style>
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header class="top-bar">
-        <div class="logo">
-            <a href="StaffHomepage.html">
-                <img src="images/logo1.png" alt="Altius Academy">
-            </a>
-        </div>
-
-        <nav class="nav-menu">
-            <a href="TeacherList.html">Teacher</a>
-            <a href="StudentList.html">Student</a>
-            <a href="ClassList.html">Class</a>
-            <a href="PackageList.html">Package</a>
-            <a href="report.html">Report</a>
-        </nav>
-
-        <div class="user-icon">
-            <span>👤</span>
-        </div>
-    </header>
-
-    <!-- MAIN CONTENT -->
-    <main class="content report-home">
-    <h2>Select Report Type</h2>
-
-    <!-- FLEX CONTAINER -->
-    <div class="report-containers">
-
-        <div class="report-container">
-            <div class="report-card">
-                <span class="icon">💰</span>
-                <h3>Financial Report</h3>
-                <p>View revenue, enrollment, collected payments and outstanding fees for all students.</p>
-                <a href="FinancialReportList.html" class="generate-btn">View</a>
-            </div>
-        </div>
-
-        <div class="report-container">
-            <div class="report-card">
-                <span class="icon">📅</span>
-                <h3>Attendance Report</h3>
-                <p>Check student attendance and class participation records to monitor performance.</p>
-                <a href="AttendanceReportList.html" class="generate-btn">View</a>
-            </div>
-        </div>
-
+<!-- HEADER -->
+<header class="top-bar">
+    <div class="logo">
+        <a href="StaffHomepage.html">
+            <img src="images/logo1.png" alt="Altius Academy">
+        </a>
     </div>
-</main>
 
+    <nav class="nav-menu">
+        <a href="TeacherList.html">Teacher</a>
+        <a href="StudentList.html">Student</a>
+        <a href="ClassList.html">Class</a>
+        <a href="PackageList.html">Package</a>
+        <a href="report.html">Report</a>
+    </nav>
+
+    <div class="user-icon">👤</div>
+</header>
+
+<!-- MAIN CONTENT -->
+<main class="content">
+
+    <div class="page-title">
+        <span>Reports Overview</span>
+    </div>
+
+    <p style="text-align:center; margin-bottom:35px; color:#555;">
+        Choose a report to view detailed information.
+    </p>
+
+    <!-- CENTER WRAPPER -->
+    <div style="display:flex; justify-content:center;">
+
+        <!-- REPORT GRID -->
+        <div class="package-grid" style="max-width:700px; width:100%;">
+
+            <!-- FINANCIAL REPORT -->
+            <div class="package-card">
+                <div class="package-title">💰 Financial Report</div>
+
+                <p>• Student payments</p>
+                <p>• Package revenue</p>
+                <p>• Outstanding balances</p>
+
+                <div class="card-actions">
+                    <a href="FinancialReportList.html" class="button">
+                        View Financial Report
+                    </a>
+                </div>
+            </div>
+
+            <!-- ATTENDANCE REPORT -->
+            <div class="package-card">
+                <div class="package-title">📅 Attendance Report</div>
+
+                <p>• Student attendance</p>
+                <p>• Class participation</p>
+                <p>• Absence records</p>
+
+                <div class="card-actions">
+                    <a href="AttendanceReportList.html" class="button">
+                        View Attendance Report
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</main>
 
 </body>
 </html>

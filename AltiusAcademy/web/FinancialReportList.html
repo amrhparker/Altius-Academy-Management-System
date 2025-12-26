@@ -5,107 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-
+    
     <style>
+    @media print {
+        body * {
+            visibility: hidden; /* sembunyikan semua */
+        }
+
+        .financial-report, .financial-report * {
+            visibility: visible; /* hanya report yg nampak */
+        }
+
         .financial-report {
-            padding: 40px 20px;
-            background: #f7f9fc;
-            min-height: calc(100vh - 80px);
-        }
-
-        .financial-report h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 30px;
-            color: #333;
-        }
-
-        /* Filter */
-        .report-filter {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-
-        .report-filter input {
-            padding: 8px 12px;
-            font-size: 14px;
-        }
-
-        .report-filter button {
-            padding: 9px 20px;
-            background-color: #6a5acd;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .report-filter button:hover {
-            background-color: #5b4bcc;
-        }
-
-        /* Summary cards */
-        .summary-cards {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-
-        .summary-card {
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        .summary-card p {
-            font-size: 14px;
-            color: #666;
-        }
-
-        .summary-card h3 {
-            margin-top: 10px;
-            font-size: 22px;
-            color: #333;
-        }
-
-        /* Table */
-        table {
+            position: absolute;
+            left: 0;
+            top: 0;
             width: 100%;
-            border-collapse: collapse;
-            background: #fff;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: center;
-            font-size: 14px;
+        .print-btn {
+            display: none;
         }
-
-        th {
-            background-color: #e6e6e6;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .summary-cards {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .summary-cards {
-                grid-template-columns: 1fr;
-            }
-        }
+    }
     </style>
+
 </head>
 
 <body>
@@ -130,39 +53,73 @@
 </header>
 
 <!-- MAIN CONTENT -->
-<main class="financial-report">
-    <h2>Financial Report</h2>
+<main class="content financial-report">
 
-    <!-- Filter -->
-    <div class="report-filter">
-        <form action="/financial_report" method="GET">
-            <label for="reportPeriod">Report Period:</label>
-            <input type="month" id="reportPeriod" name="reportPeriod" required />
-            <button type="submit">Generate</button>
+    <!-- PAGE TITLE -->
+    <div class="page-title">Financial Report</div>
+
+    <!-- FILTER FORM -->
+    <div class="form">
+        <form method="GET" style="text-align:center;">
+            <label>Report Period:</label>
+            <input type="month" name="month">
+            <button class="button">Generate</button>
+            <a href="FinancialReportPDFServlet" onclick="window.print()" class="button print-btn">Print</a>
         </form>
     </div>
 
-    <!-- Summary -->
-    <div class="summary-cards">
-        <div class="summary-card">
-            <p>Total Revenue</p>
-            
+    <!-- SUMMARY CARDS AT TOP -->
+    <div class="package-grid" style="margin-bottom: 30px;">
+        <div class="package-card">
+            <div class="package-title">Total Revenue</div>
+            <p>RM 12,500</p>
         </div>
-        <div class="summary-card">
-            <p>Total Collected</p>
-            
+        <div class="package-card">
+            <div class="package-title">Total Collected</div>
+            <p>RM 10,800</p>
         </div>
-        <div class="summary-card">
-            <p>Outstanding Fees</p>
-            
+        <div class="package-card">
+            <div class="package-title">Outstanding Fees</div>
+            <p>RM 1,700</p>
         </div>
-        <div class="summary-card">
-            <p>Total Enrollments</p>
-            
+        <div class="package-card">
+            <div class="package-title">Total Enrollment</div>
+            <p>85</p>
         </div>
     </div>
 
-   
+    <!-- DETAIL TABLE -->
+    <div class="section">
+        <div class="table-title">Payment Details</div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Student</th>
+                    <th>Package</th>
+                    <th>Total Fee</th>
+                    <th>Paid</th>
+                    <th>Outstanding</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ahmad Ali</td>
+                    <td>Science Package</td>
+                    <td>RM 300</td>
+                    <td>RM 200</td>
+                    <td>RM 100</td>
+                </tr>
+                <tr>
+                    <td>Siti Aminah</td>
+                    <td>Math Package</td>
+                    <td>RM 250</td>
+                    <td>RM 250</td>
+                    <td>RM 0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
 </main>
 
